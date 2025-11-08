@@ -10,6 +10,7 @@
             <p class="text-center">
                 <form action="{{ route('cart.update', $product->id) }}" method="post" class="py-3 text-center">
                     @csrf
+                    <input type="hidden" name="action" value="add">
                     <button type="submit" class="text-blue-600 font-semibold hover:underline">Add to Cart</button>
                 </form>
             </p>
