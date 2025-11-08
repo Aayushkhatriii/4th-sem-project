@@ -14,12 +14,12 @@ class UserCartController extends Controller
             return redirect()->route('login')->with('error', 'Please login to update products to cart');
         }
         $user = auth()->user();
-        $quantity = UserCart::where('user_id', $user->id)->where('product_id', $product->id)->first()->quantity;
+        $userCartItem = UserCart::where('user_id', $user->id)->where('product_id', $product->id)->first();
         $userCart = UserCart::updateOrCreate([
             'user_id' => $user->id,
             'product_id' => $product->id,
         ], [
-            'quantity' => ($request->action == 'add') ? $quantity + 1 : $quantity - 1,
+            'quantity' => ($request->action == 'add') ? (($userCartItem && $userCartItem->quantity) ? $userCartItem->quantity + 1 : 1) : (($userCartItem && $userCartItem->quantity) ? $userCartItem->quantity - 1 : 1),
         ]);
         if($userCart){
             session()->forget('product_updated_in_cart');
