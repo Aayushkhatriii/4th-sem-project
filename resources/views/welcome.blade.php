@@ -64,6 +64,21 @@
                         <a href="/profile" class="hover:text-red-200 transition-colors duration-200 flex items-center">
                             Profile
                         </a>
+
+                        @auth
+                          <a href="/dashboard" class="hover:text-red-200 transition-colors duration-200 flex items-center">Dashboard</a>
+                        @endauth
+                        @guest
+                          <!-- Login -->
+                          <a href="/login" class="hover:text-red-200 transition-colors duration-200 flex items-center">
+                            Login
+                          </a>
+                          
+                          <!-- Register -->
+                          <a href="/register" class="hover:text-red-200 transition-colors duration-200 flex items-center">
+                            Register
+                          </a>
+                        @endguest
                     </div>
                 </div>
             </div>
