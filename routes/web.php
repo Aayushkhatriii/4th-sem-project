@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserCartController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +32,8 @@ Route::get('/all-products', function () {
 Route::get('/cart', function () {
     return view('cart');
 })->name('cart');
+
+Route::post('/cart/add/{product:id}', [UserCartController::class, 'add'])->name('cart.add');
 
 Route::middleware('auth')->group(function () {
     Route::get('products-all', [ProductController::class, 'showAllProducts'])->name('products.all');

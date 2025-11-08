@@ -156,6 +156,11 @@
             </div>
         </div>
     </footer>
+    @if(session()->has('product_added_to_cart') && session('product_added_to_cart'))
+      <p class="fixed bottom-6 right-6 z-50 bg-white rounded-lg shadow-lg px-5 py-3 text-green-500 font-semibold mt-2">
+        Item added to cart!
+      </p>
+    @endif
 </body>
 
 </html>

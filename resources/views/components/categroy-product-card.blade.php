@@ -7,8 +7,11 @@
             <h3 class="bg-gray-100 text-center py-2 font-medium text-gray-700">{{ $product->name }}</h3>
             <img src="{{ asset('products/images/' . $product->image) }}" alt="{{ $product->name }}"
                 class="w-full h-48 object-cover">
-            <p class="text-center py-3">
-                <a href="{{ route('cart') }}" class="text-blue-600 font-semibold hover:underline">Add to Cart</a>
+            <p class="text-center">
+                <form action="{{ route('cart.add', $product->id) }}" method="post" class="py-3 text-center">
+                    @csrf
+                    <button type="submit" class="text-blue-600 font-semibold hover:underline">Add to Cart</button>
+                </form>
             </p>
         </div>
     @endforeach
