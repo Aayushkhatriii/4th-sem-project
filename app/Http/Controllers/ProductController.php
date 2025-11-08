@@ -44,7 +44,10 @@ class ProductController extends Controller
         ]);
         $image = $request->file('image');
         $imageName = time() . '.' . $image->getClientOriginalExtension();
-        $image->move(public_path('images'), $imageName);
+        if (!is_dir(public_path('products/images'))) {
+            mkdir(public_path('products/images'), 0777, true);
+        }
+        $image->move(public_path('products/images'), $imageName);
         $product = Product::create([
             'user_id' => auth()->user()->id,
             'category_id' => $request->category_id,
@@ -91,7 +94,7 @@ class ProductController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('images'), $imageName);
+            $image->move(public_path('products/images'), $imageName);
         }
         $product->update([
             'name' => $request->name,

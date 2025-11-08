@@ -25,7 +25,7 @@
                     @foreach ($products as $index => $product)
                         <tr>
                             <td class="px-4 py-2">{{ $index + 1 }}</td>
-                            <td class="px-4 py-2 flex items-center space-x-2"><img src="{{ asset('images/' . $product->image) }}" alt="{{ $product->name }}" class="w-20 h-20 object-cover rounded"> <span></span>{{ $product->name }}</span></td>
+                            <td class="px-4 py-2 flex items-center space-x-2"><img src="{{ asset('products/images/' . $product->image) }}" alt="{{ $product->name }}" class="w-20 h-20 object-cover rounded"> <span></span>{{ $product->name }}</span></td>
                             <td class="px-4 py-2">{{ $product->price }}</td>
                             <td class="px-4 py-2">{{ $product->category->name ?? 'Uncategorized' }}</td>
                             <td class="px-4 py-2 space-x-4">
