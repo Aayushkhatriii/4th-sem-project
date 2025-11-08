@@ -8,7 +8,7 @@
             <img src="{{ asset('products/images/' . $product->image) }}" alt="{{ $product->name }}"
                 class="w-full h-48 object-cover">
             <p class="text-center">
-                <form action="{{ route('cart.add', $product->id) }}" method="post" class="py-3 text-center">
+                <form action="{{ route('cart.update', $product->id) }}" method="post" class="py-3 text-center">
                     @csrf
                     <button type="submit" class="text-blue-600 font-semibold hover:underline">Add to Cart</button>
                 </form>

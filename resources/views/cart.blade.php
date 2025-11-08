@@ -28,8 +28,13 @@
 
     {{-- Main Items Section --}}
     <div class="max-w-7xl mx-auto px-6 py-10">
+        {{-- @foreach ($userCart as $item) --}}
+            @include('components.cart-products', ['userCart' => $userCart])
+        {{-- @endforeach --}}
+    </div>
+    {{-- <div class="max-w-7xl mx-auto px-6 py-10"> --}}
         <!-- Best Sellers -->
-        <h6 class="text-xl font-semibold text-gray-800 mb-4">Electronics</h6>
+        {{-- <h6 class="text-xl font-semibold text-gray-800 mb-4">Electronics</h6>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10">
             <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden transition">
                 <div class="bg-gray-100 text-center py-2 font-medium text-gray-700">Iron</div>
@@ -269,7 +274,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
     <!-- Footer -->
@@ -282,6 +287,7 @@
             </div>
         </div>
     </footer>
+    @include('components.toast-cart-added')
 </body>
 
 </html>

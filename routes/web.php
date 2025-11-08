@@ -29,11 +29,9 @@ Route::get('/all-products', function () {
     return view('products');
 })->name('all-products');
 
-Route::get('/cart', function () {
-    return view('cart');
-})->name('cart');
+Route::get('/cart', [UserCartController::class, 'cartProducts'])->name('cart');
 
-Route::post('/cart/add/{product:id}', [UserCartController::class, 'add'])->name('cart.add');
+Route::post('/cart/update/{product:id}', [UserCartController::class, 'update'])->name('cart.update');
 
 Route::middleware('auth')->group(function () {
     Route::get('products-all', [ProductController::class, 'showAllProducts'])->name('products.all');
