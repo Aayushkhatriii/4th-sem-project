@@ -11,7 +11,7 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function showAllProducts()
     {
         $products = Product::where('user_id', auth()->user()->id)->get();
         return view('products.index', [
@@ -56,7 +56,7 @@ class ProductController extends Controller
             'description' => $request->description,
             'image' => $imageName
         ]);
-        return redirect()->route('product.index')->with('success', 'Product created successfully');
+        return redirect()->route('products.all')->with('success', 'Product created successfully');
     }
 
     /**
@@ -103,7 +103,7 @@ class ProductController extends Controller
             'description' => $request->description,
             'image' => $imageName ?? $product->image
         ]);
-        return redirect()->route('product.index')->with('success', 'Product updated successfully');
+        return redirect()->route('products.all')->with('success', 'Product updated successfully');
     }
 
     /**
@@ -112,9 +112,9 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         if ($product->image) {
-            unlink(public_path('images/' . $product->image));
+            unlink(public_path('products/images/' . $product->image));
         }
         $product->delete();
-        return redirect()->route('product.index')->with('success', 'Product deleted successfully');
+        return redirect()->route('products.all')->with('success', 'Product deleted successfully');
     }
 }

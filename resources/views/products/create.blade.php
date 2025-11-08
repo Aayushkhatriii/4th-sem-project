@@ -90,7 +90,7 @@
                             class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
                             Create Product
                         </button>
-                        <a href="{{ route('products.index') }}" class="p-4 rounded text-white bg-gray-600 font-semibold hover:underline">Cancel</a>
+                        <a href="{{ route('products.all') }}" class="p-4 rounded text-white bg-gray-600 font-semibold hover:underline">Cancel</a>
                     </div>
                 </form>
             </div>

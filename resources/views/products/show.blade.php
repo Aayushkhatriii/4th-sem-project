@@ -3,7 +3,7 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ $product->name }}
         </h2>
-        <a href="{{ route('products.index') }}" class="text-blue-600 font-semibold hover:underline">Back to Products</a>
+        <a href="{{ route('products.all') }}" class="text-blue-600 font-semibold hover:underline">Back to Products</a>
     </x-slot>
 
     <div class="py-12">

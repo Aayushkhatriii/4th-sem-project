@@ -4,7 +4,7 @@
             <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
                 Products
             </h2>
-            <a href="{{ route('product.create') }}"
+            <a href="{{ route('products.create') }}"
                 class="p-4 rounded text-white bg-blue-600 font-semibold hover:underline">Create Product</a>
         </div>
     </x-slot>
@@ -31,9 +31,9 @@
                             <td class="px-4 py-2 space-x-4">
 
                                 <div class="flex items-center space-x-4">
-                                    <a href="{{ route('product.edit', $product) }}"
+                                    <a href="{{ route('products.edit', $product) }}"
                                     class="text-blue-600 font-semibold hover:underline">Edit</a>
-                                    <form action="{{ route('product.destroy', $product) }}" method="POST">
+                                    <form action="{{ route('products.destroy', $product) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="text-red-600 font-semibold hover:underline">Delete</button>

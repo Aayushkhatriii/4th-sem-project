@@ -3,7 +3,7 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             Edit Product
         </h2>
-        <a href="{{ route('products.index') }}" class="text-blue-600 font-semibold hover:underline">Back to Products</a>
+        <a href="{{ route('products.all') }}" class="text-blue-600 font-semibold hover:underline">Back to Products</a>
     </x-slot>
 
     <div class="py-12">
@@ -72,7 +72,7 @@
                             class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
                             Update Product
                         </button>
-                        <a href="{{ route('products.index') }}"
+                        <a href="{{ route('products.all') }}"
                             class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded">
                             Cancel
                         </a>
