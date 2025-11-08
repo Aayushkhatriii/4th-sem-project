@@ -103,7 +103,7 @@
       <div class="bg-gray-100 text-center py-2 font-medium text-gray-700">Jackets</div>
       <img src="{{ asset('images/Jacket.jpg') }}" alt="Jackets" class="w-full h-48 object-cover">
       <div class="text-center py-3">
-        <a href="#" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
+        <a href="{{ route('products') }}" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
       </div>
     </div>
 
@@ -111,7 +111,7 @@
       <div class="bg-gray-100 text-center py-2 font-medium text-gray-700">Electronics</div>
       <img src="{{ asset('images/Electronics.jpg') }}" alt="Electronics" class="w-full h-48 object-cover">
       <div class="text-center py-3">
-        <a href="#" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
+        <a href="{{ route('products') }}" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
       </div>
     </div>
 
@@ -119,7 +119,7 @@
       <div class="bg-gray-100 text-center py-2 font-medium text-gray-700">Home Decor</div>
       <img src="{{ asset('images/Home-Decor.jpg') }}" alt="Home Decor" class="w-full h-48 object-cover">
       <div class="text-center py-3">
-        <a href="#" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
+        <a href="{{ route('products') }}" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
       </div>
     </div>
 
@@ -127,7 +127,7 @@
       <div class="bg-gray-100 text-center py-2 font-medium text-gray-700">Toys</div>
       <img src="{{ asset('images/Toys.jpg') }}" alt="Toys" class="w-full h-48 object-cover">
       <div class="text-center py-3">
-        <a href="#" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
+        <a href="{{ route('products') }}" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
       </div>
     </div>
   </div>
@@ -139,7 +139,7 @@
       <div class="bg-gray-100 text-center py-2 font-medium text-gray-700">Gaming items</div>
       <img src="{{ asset('images/Gaming.jpg') }}" alt="Gaming items" class="w-full h-48 object-cover">
       <div class="text-center py-3">
-        <a href="#" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
+        <a href="{{ route('products') }}" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
       </div>
     </div>
 
@@ -147,7 +147,7 @@
       <div class="bg-gray-100 text-center py-2 font-medium text-gray-700">Electronics</div>
       <img src="{{ asset('images/Electronics.jpg') }}" alt="Electronics" class="w-full h-48 object-cover">
       <div class="text-center py-3">
-        <a href="#" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
+        <a href="{{ route('products') }}" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
       </div>
     </div>
 
@@ -155,7 +155,7 @@
       <div class="bg-gray-100 text-center py-2 font-medium text-gray-700">Lady Accessories</div>
       <img src="{{ asset('images/Lady-Accessories.jpg') }}" alt="Lady Accessories" class="w-full h-48 object-cover">
       <div class="text-center py-3">
-        <a href="#" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
+        <a href="{{ route('products') }}" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
       </div>
     </div>
 
@@ -163,7 +163,7 @@
       <div class="bg-gray-100 text-center py-2 font-medium text-gray-700">Toys</div>
       <img src="{{ asset('images/Toys.jpg') }}" alt="Toys" class="w-full h-48 object-cover">
       <div class="text-center py-3">
-        <a href="#" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
+        <a href="{{ route('products') }}" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
       </div>
     </div>
   </div>
@@ -175,7 +175,7 @@
       <div class="bg-gray-100 text-center py-2 font-medium text-gray-700">Pants</div>
       <img src="{{ asset('images/Pants.jpg') }}" alt="Pants" class="w-full h-48 object-cover">
       <div class="text-center py-3">
-        <a href="#" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
+        <a href="{{ route('products') }}" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
       </div>
     </div>
 
@@ -183,7 +183,7 @@
       <div class="bg-gray-100 text-center py-2 font-medium text-gray-700">Shoes</div>
       <img src="{{ asset('images/Shoes.jpg') }}" alt="Shoes" class="w-full h-48 object-cover">
       <div class="text-center py-3">
-        <a href="#" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
+        <a href="{{ route('products') }}" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
       </div>
     </div>
 
@@ -191,7 +191,7 @@
       <div class="bg-gray-100 text-center py-2 font-medium text-gray-700">Watches</div>
       <img src="{{ asset('images/Watch.jpg') }}" alt="Watches" class="w-full h-48 object-cover">
       <div class="text-center py-3">
-        <a href="#" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
+        <a href="{{ route('products') }}" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
       </div>
     </div>
 
@@ -199,7 +199,7 @@
       <div class="bg-gray-100 text-center py-2 font-medium text-gray-700">Jersey</div>
       <img src="{{ asset('images/Jersey.jpeg') }}" alt="Jersey" class="w-full h-48 object-cover">
       <div class="text-center py-3">
-        <a href="#" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
+        <a href="{{ route('products') }}" class="text-blue-600 font-semibold hover:underline">Shop Now</a>
       </div>
     </div>
   </div>
