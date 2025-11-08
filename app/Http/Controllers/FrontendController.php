@@ -14,4 +14,12 @@ class FrontendController extends Controller
             'categories' => $categories
         ]);
     }
+
+    public function allProducts()
+    {
+        $categories = Category::all();
+        return view('products', [
+            'categories' => $categories
+        ]);
+    }
 }

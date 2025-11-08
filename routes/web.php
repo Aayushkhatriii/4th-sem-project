@@ -25,9 +25,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::get('/all-products', function () {
-    return view('products');
-})->name('all-products');
+Route::get('/all-products', [FrontendController::class, 'allProducts'])->name('all-products');
 
 Route::get('/cart', [UserCartController::class, 'cartProducts'])->name('cart');
 
