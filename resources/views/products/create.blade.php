@@ -8,7 +8,7 @@
     <div class="py-12">
         <div class="max-w-2xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 rounded shadow p-6">
-                <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div class="mb-4">
@@ -90,7 +90,7 @@
                             class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
                             Create Product
                         </button>
-                        <a href="{{ route('product.index') }}" class="p-4 rounded text-white bg-gray-600 font-semibold hover:underline">Cancel</a>
+                        <a href="{{ route('products.index') }}" class="p-4 rounded text-white bg-gray-600 font-semibold hover:underline">Cancel</a>
                     </div>
                 </form>
             </div>

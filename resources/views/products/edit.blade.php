@@ -3,13 +3,13 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             Edit Product
         </h2>
-        <a href="{{ route('product.index') }}" class="text-blue-600 font-semibold hover:underline">Back to Products</a>
+        <a href="{{ route('products.index') }}" class="text-blue-600 font-semibold hover:underline">Back to Products</a>
     </x-slot>
 
     <div class="py-12">
         <div class="max-w-2xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 rounded shadow p-6">
-                <form action="{{ route('product.update', $product) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('products.update', $product) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 
@@ -72,7 +72,7 @@
                             class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
                             Update Product
                         </button>
-                        <a href="{{ route('product.index') }}"
+                        <a href="{{ route('products.index') }}"
                             class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded">
                             Cancel
                         </a>

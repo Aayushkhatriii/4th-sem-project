@@ -29,32 +29,32 @@
                     </a>
 
                     <!-- Products -->
-                    <a href="/products" class="hover:text-red-200 transition-colors duration-200 flex items-center">
+                    <a href="{{ route('all-products') }}" class="hover:text-red-200 transition-colors duration-200 flex items-center">
                         Products
                     </a>
 
                     <!-- Cart -->
-                    <a href="/cart" class="hover:text-red-200 transition-colors duration-200 flex items-center">
+                    <a href="{{ route('cart') }}" class="hover:text-red-200 transition-colors duration-200 flex items-center">
                         Cart
                     </a>
 
                     <!-- Profile -->
-                    <a href="/profile" class="hover:text-red-200 transition-colors duration-200 flex items-center">
+                    <a href="{{ route('profile.edit') }}" class="hover:text-red-200 transition-colors duration-200 flex items-center">
                         Profile
                     </a>
 
                     @auth
-                        <a href="/dashboard"
+                        <a href="{{ route('dashboard') }}"
                             class="hover:text-red-200 transition-colors duration-200 flex items-center">Dashboard</a>
                     @endauth
                     @guest
                         <!-- Login -->
-                        <a href="/login" class="hover:text-red-200 transition-colors duration-200 flex items-center">
+                        <a href="{{ route('login') }}" class="hover:text-red-200 transition-colors duration-200 flex items-center">
                             Login
                         </a>
 
                         <!-- Register -->
-                        <a href="/register" class="hover:text-red-200 transition-colors duration-200 flex items-center">
+                        <a href="{{ route('register') }}" class="hover:text-red-200 transition-colors duration-200 flex items-center">
                             Register
                         </a>
                     @endguest

@@ -3,7 +3,7 @@
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ $product->name }}
         </h2>
-        <a href="{{ route('product.index') }}" class="text-blue-600 font-semibold hover:underline">Back to Products</a>
+        <a href="{{ route('products.index') }}" class="text-blue-600 font-semibold hover:underline">Back to Products</a>
     </x-slot>
 
     <div class="py-12">
@@ -19,11 +19,11 @@
                         <p class="text-gray-700 dark:text-gray-300 mb-2"><span class="font-semibold">Price:</span> ${{ number_format($product->price, 2) }}</p>
                         <p class="text-gray-700 dark:text-gray-300 mb-4"><span class="font-semibold">Description:</span> {{ $product->description }}</p>
                         <div class="flex space-x-4 mt-6">
-                            <a href="{{ route('product.edit', $product) }}"
+                            <a href="{{ route('products.edit', $product) }}"
                                 class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded">
                                 Edit
                             </a>
-                            <form action="{{ route('product.destroy', $product) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this product?');">
+                            <form action="{{ route('products.destroy', $product) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this product?');">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded">

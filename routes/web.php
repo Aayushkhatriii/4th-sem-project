@@ -24,20 +24,21 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+
+Route::get('/all-products', function () {
+    return view('products');
+})->name('all-products');
+
+Route::get('/cart', function () {
+    return view('cart');
+})->name('cart');
+
 Route::middleware('auth')->group(function () {
-    Route::resource('product', ProductController::class);
+    Route::resource('products', ProductController::class);
     Route::resource('categories', CategoryController::class);
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-Route::get('/products', function () {
-    return view('products');
-})->name('products');
-
-Route::get('/cart', function () {
-    return view('cart');
-})->name('cart');
 
 require __DIR__.'/auth.php';
