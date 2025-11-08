@@ -41,9 +41,16 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 7M7 13l-2 6h14m-8 0a2 2 0 104 0"></path>
                         </svg>
+                        @auth
+                            
                         <span class="absolute -top-2 -right-2 bg-white text-red-600 rounded-full text-xs px-1.5 py-0.5 font-bold border border-red-600">
                             {{ session()->has('cart_items.' . auth()->user()->id) && session('cart_items.' . auth()->user()->id) ? session('cart_items.' . auth()->user()->id)['quantity'] : 0 }}
                         </span>
+                        @else
+                            <span class="absolute -top-2 -right-2 bg-white text-red-600 rounded-full text-xs px-1.5 py-0.5 font-bold border border-red-600">
+                                0
+                            </span>
+                        @endauth
                     </span>
                     </a>
 
