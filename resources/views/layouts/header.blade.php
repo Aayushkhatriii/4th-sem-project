@@ -54,12 +54,12 @@
                     </span>
                     </a>
 
-                    <!-- Profile -->
-                    <a href="{{ route('profile.edit') }}" class="hover:text-red-200 transition-colors duration-200 flex items-center">
-                        Profile
-                    </a>
-
                     @auth
+                        <!-- Profile -->
+                        <a href="{{ route('profile.edit') }}" class="hover:text-red-200 transition-colors duration-200 flex items-center">
+                            Profile
+                        </a>
+
                         <a href="{{ route('dashboard') }}"
                             class="hover:text-red-200 transition-colors duration-200 flex items-center">Dashboard</a>
                     @endauth
